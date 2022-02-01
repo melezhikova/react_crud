@@ -38,8 +38,7 @@ function NoteForm () {
         })
     }
    
-    const clickToDelete = (evt) => {
-        const id = evt.target.dataset.id;
+    const clickToDelete = (id) => {
         fetch(`${process.env.REACT_APP_NOTES_URL}/${id}`, {
             method: 'DELETE'
         })
